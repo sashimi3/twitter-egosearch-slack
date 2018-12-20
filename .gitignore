@@ -3,6 +3,7 @@
 .DS_Store
 tmp
 .ruby-version
+.vscode
 config.yml
 vendor
 data
