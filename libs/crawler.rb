@@ -12,7 +12,7 @@ module EgoSearch
       Config.words.each do |word|
         @client.search(word).each do |tweet|
           emit :crawl, word, tweet
-          next if Tweet.exists? tweet.id
+          break if Tweet.exists? tweet.id
           tweet = Tweet.parse tweet
           unless @nosave
             begin
