@@ -4,3 +4,5 @@
 tmp
 .ruby-version
 config.yml
+vendor
+data

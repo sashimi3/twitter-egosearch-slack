@@ -7,7 +7,7 @@ require "inits/db"
 require "inits/config"
 require "models/tweet"
 require "libs/crawler"
-require "libs/slack"
+require "libs/sender"
 
 args = ArgsParser.parse ARGV do
   arg :nosave, "nosave"
@@ -27,7 +27,7 @@ end
 
 crawler.on :new do |word, tweet|
   puts "[new:#{word}] - #{tweet}"
-  EgoSearch::Slack.send ":beer: [#{word}] @#{tweet.user} :beer:\n#{tweet.url}"
+  EgoSearch::Sender.send "[#{word}] @#{tweet.user}\n#{tweet.url}"
 end
 
 crawler.on :error do |err|

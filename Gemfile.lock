@@ -18,6 +18,9 @@ GEM
     event_emitter (0.2.5)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.12.2)
+      faraday (>= 0.7.4, < 1.0)
+    gli (2.18.0)
     hashie (1.2.0)
     http (0.6.1)
       http_parser.rb (~> 0.6.0)
@@ -44,8 +47,13 @@ GEM
     rainbow (2.0.0)
     ruby-dbus (0.11.0)
     simple_oauth (0.2.0)
-    slackbot (0.0.2)
-      json (~> 1.4)
+    slack-ruby-client (0.13.1)
+      activesupport
+      faraday (>= 0.9)
+      faraday_middleware
+      gli
+      hashie
+      websocket-driver
     thread_safe (0.3.4)
     tw (1.0.9)
       args_parser (>= 0.2.0)
@@ -71,6 +79,9 @@ GEM
       hashie (~> 1.2.0)
       oauth (~> 0.4.7)
       yajl-ruby (~> 1.1.0)
+    websocket-driver (0.7.0)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.3)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -84,5 +95,8 @@ DEPENDENCIES
   hugeurl
   mongoid
   ruby-dbus
-  slackbot
+  slack-ruby-client
   tw (>= 1.0.0)
+
+BUNDLED WITH
+   1.15.4
