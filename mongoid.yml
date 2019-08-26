@@ -1,11 +1,11 @@
 development:
-  sessions:
+  clients:
     default:
       database: twitter-egosearch-slack-dev
       hosts:
         - localhost:27017
 production:
-  sessions:
+  clients:
     default:
       database: twitter-egosearch-slack
       hosts:
