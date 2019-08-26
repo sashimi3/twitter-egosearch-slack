@@ -27,7 +27,7 @@ end
 
 crawler.on :new do |word, tweet|
   puts "[new:#{word}] - #{tweet}"
-  EgoSearch::Sender.send "[#{word}] @#{tweet.user}\n#{tweet.url}"
+  EgoSearch::Sender.send "[#{word}] (re)tweeted by @#{tweet.user}\n#{tweet.url}"
 end
 
 crawler.on :error do |err|
