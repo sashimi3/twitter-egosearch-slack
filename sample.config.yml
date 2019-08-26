@@ -4,6 +4,8 @@ twitter:
 slack:
   channel: "#general"
   token: "your-slackbot-token"
+  username: "Twitter"
+  icon_emoji: ":baby_chick:"
 
 words:
   - "shokai.org"
