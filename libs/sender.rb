@@ -5,7 +5,7 @@ module EgoSearch
         Config.slack.has_key? 'token' and
         Config.slack.has_key? 'channel' and
         Config.slack.has_key? 'username' and
-        Config.slack.has_key? 'icon_emoji'
+        Config.slack.has_key? 'icon_emoji' or Config.slack.has_key? 'icon_url'
 
       Slack.configure do |config|
         config.token = Config.slack.token
@@ -20,7 +20,8 @@ module EgoSearch
         channel: Config.slack.channel,
         text: message,
         username: Config.slack.username,
-        icon_emoji: Config.slack.icon_emoji)
+        icon_emoji: Config.slack.icon_emoji,
+        icon_url: Config.slack.icon_url)
     end
   end
 

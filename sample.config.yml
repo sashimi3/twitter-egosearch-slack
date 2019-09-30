@@ -5,7 +5,8 @@ slack:
   channel: "#general"
   token: "your-slackbot-token"
   username: "Twitter"
-  icon_emoji: ":baby_chick:"
+  icon_emoji: ":baby_chick:" # Overrides icon_url
+  icon_url: "http://lorempixel.com/48/48"
 
 words:
   - "shokai.org"
