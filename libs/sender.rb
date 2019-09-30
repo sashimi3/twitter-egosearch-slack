@@ -3,8 +3,8 @@ module EgoSearch
   class Sender
     if Config.slack.kind_of? Hash and
         Config.slack.has_key? 'token' and
-        Config.slack.has_key? 'channel'
-        Config.slack.has_key? 'username'
+        Config.slack.has_key? 'channel' and
+        Config.slack.has_key? 'username' and
         Config.slack.has_key? 'icon_emoji'
 
       Slack.configure do |config|
